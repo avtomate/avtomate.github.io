@@ -23,12 +23,13 @@
 }
 
 #footer {
-  font-family: Roboto
+  font-family: Roboto;
   background-color: black;
   color: white;
   clear:both;
   text-align:center;
-  padding:5px;
+  height: 5em;
+  width: 100%;
 }
 
 a {
