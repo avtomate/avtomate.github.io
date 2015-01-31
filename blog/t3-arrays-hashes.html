@@ -23,24 +23,43 @@
 
   <div id="section">
     <h1>Arrays and Hashes in Ruby</h1>
-    <h2>January 30, 2015</h2>
+    <h4>January 30, 2015</h4>
 
     <p>
-      Data structures are an integral part of using and understanding any computer language, and Ruby is no exception.  To the uninitiated, Arrays and Hashes can be rather confusing given their many similarities.  But Arrays and Hashes are completely accessible once we understand their key features.
+      Data structures are an integral part of using and understanding any computer language, and Ruby is no exception.  To the uninitiated, Arrays and Hashes can be rather confusing given their many similarities.  But Arrays and Hashes are completely accessible once we understand their key features and what makes each unique.
     </p>
 
-    <h3>Arrays</h3>
+    <h2>Arrays</h2>
 
     <p>
-      Arrays are ordered, integer-indexed collections of any object.  They can contain anything from strings, to integers, to floats, to boolean values.
+      Arrays are ordered, integer-indexed collections of any object.  They can contain anything from strings, to integers, to floats, to boolean values. Below is an example of an array.
     </p>
 
     <code>our_array = ["corgis", 21, 16.34, true]</code>
 
     <p>
-      When we say arrays are <b>ordered</b>, that means that when and where each element
+      When we say arrays are <b>ordered</b>, that means that when and where each element is placed is significant, and will represent their index (or how we'll access them at a later time).  When we say arrays are <b>integer-indexed</b> this means they can be accessed by their corresponding index number (e.g. the first object has index value 0).  And when we say arrays are <b>collections of any object</b>, this means they can contain any object type, as previously noted.
+    </p>
 
-    <h3>Hashes</h3>
+    <p>Enough theory, let's see concrete examples!  To create an array, we could use the literal notation of <code> our_array = Array.new </code> and then proceed to add elements by doing <code>our_array[0] = "corgis"</code> <code>our_array[1] = 21</code>, and so on, but that's not incredibly efficient.  Instead let's instantiate (a fancy word for create) the array AND assign objects to the array in one fell swoop.  This can be done by typing <code>our_array = ["corgis", 21, 16.34, true]</code>.  Now not only has the array been created, but we've also added 4 elements to the array!
+    </p>
+
+    <p>
+      Manipulating and accessing objects is just as simple.  Keeping in mind that the first element in an array is referred to as having the index 0, we can 'puts' the first object by typing <code>puts our_array[0]</code>.  This will output a string of the first (or 0-indexed) object in our array, "corgis".  How about if we want to output the fourth element?  Subtract one from four, and then we'll type <code>puts our_array[3]</code>, which will output "true".
+
+    <h2>Hashes</h2>
+
+    <p>
+      Hashes (often referred to as dictionaries in other languages) are collections of unique keys and their values.  So whereas arrays are indexed by ascending numbers beginning at 0, hashes can be indexed by strings or symbols (more on these later).  Keep in mind that all keys must be unique, whereas values can repeat.  Let's now recreate our array as a hash with some more pertinent information!
+    </p>
+
+    <p>
+      First, we'll instantiate our hash by typing <code> favorites_hash = { "dog" => "corgi", "integer" => 21, "float" => 16.34, "boolean" => true }</code>.  Now instead of accessing "corgi" by using index 0, we would use the index "dog" like so: <code>favorites_hash["dog"]</code>.  This would then return "corgi".  How fun! Note how we used the hash rocket '=>' to associate a key with a value.
+    </p>
+
+    <p>
+      Regarding when we should use an array relative to a hash, that is a value judgement.  Arrays may be better utilized when order is significant, and a string as a key wouldn't be appropriate (e.g. top 5 bands ever).  A hash may be better utilized when we'll want to access given values by calling a symbol or string corresponding to it (e.g. animal_names = { "cat" => "Boots", "dog" => "Rover", "rabbit" => "Bugs" }).
+    </p>
   </div>
 
   <div id="footer">
