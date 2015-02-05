@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css' />
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css" />
+  <title> Michael Avtonomoff </title>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Michael Avtonomoff</h1>
+  </div>
+
+  <div id="nav">
+    <a href="http://avtomate.github.io">Home</a><br>
+    Projects<br>
+    <a href="http://avtomate.github.io/blog">Blog</a><br>
+    About Me<br>
+  </div>
+
+  <div id="section">
+    <h1>Array#map and You</h1>
+    <h4>February 4, 2015</h4>
+
+    <p>
+    The <code>.map</code> method allows one to execute a given block (e.g. <code>{ |x| x * 2 }</code> ) for each element of the array.  That sounds awfully similar to the <code>.each</code> method, no?  True!  The main difference being that <code>.map</code> returns a new array whose values are the return values of each block iteration, whereas <code>.each</code> will return the original, unmodified array by default.
+    </p>
+
+    <h2>Array#map in Practice</h2>
+    <p>
+      <code>yeezy_goat_albums = ["My Beautiful Dark Twisted Fantasy", "Graduation", "Yeezus"]</code>\n
+      <code>all_caps_weee = yeezy_goat_albums.map { |album| album.upcase }</code>
+    </p>
+
+    <p>
+      As you can see, this method manipulates each element in an array and returns an array of the manipulated element.  So whereas the original array contained Yeezy's best albums, by invoking map on the array, and then invoking upcase on each element, we are returned a modified array where every element is upcase'd!  Praise Yeezus.t
+    </p>
+
+  </div>
+
+  <div id="footer">
+    <a href="https://github.com/avtomate">GitHub</a>
+  </div>
+
+</body>
+
+</html>
