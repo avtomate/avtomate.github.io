@@ -22,14 +22,14 @@
   </div>
 
   <div id="section">
-    <h1>Array#map and You</h1>
+    <h1>Enumerable#map and You</h1>
     <h4>February 4, 2015</h4>
 
     <p>
     The <code>.map</code> method allows one to execute a given block (e.g. <code>{ |x| x * 2 }</code> ) for each element of the array.  That sounds awfully similar to the <code>.each</code> method, no?  True!  The main difference being that <code>.map</code> returns a new array whose values are the return values of each block iteration, whereas <code>.each</code> will return the original, unmodified array by default.
     </p>
 
-    <h2>Array#map in Practice</h2>
+    <h2>Enumerable#map in Practice</h2>
     <p>
       <code>yeezy_goat_albums = ["My Beautiful Dark Twisted Fantasy", "Graduation", "Yeezus"]</code><br>
       <code>all_caps_weee = yeezy_goat_albums.map { |album| album.upcase }</code>
