@@ -32,6 +32,12 @@
   width: 100%;
 }
 
+code {
+  border: black solid 1px;
+  padding: 1.5px;
+  background: #99FFFF;
+}
+
 a {
   color: inherit;
 }
