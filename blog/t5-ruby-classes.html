@@ -27,25 +27,19 @@
 
     <h2>What Are Classes?</h2>
     <p>
-      I think I speak for everyone when I say the ideal text-based RPG would have
-      characters that are only bears. I'd want these characters to have many
-      shared abilities, talents, and traits, but ultimately be unique when and
-      where I deem it appropriate.  But rewriting every single bear to have a
-      method to "roar" and another method to "hibernate" would be terribly redundant.
-      Thankfully, we have "classes" in Ruby which allow us to create new instances
-      of classes that possess the classes' methods and characteristics.
+      I think I speak for everyone when I say the ideal text-based RPG would have characters that are only bears. I'd want these characters to have many shared abilities, talents, and traits, but ultimately be unique when and where I deem it appropriate.  But rewriting every single bear to have a method to "roar" and another method to "hibernate" would be terribly redundant.  Thankfully, we have "classes" in Ruby which allow us to create new instances of classes that possess the shared methods and characteristics.
     </p>
 
     <script src="https://gist.github.com/avtomate/a477dbe301d2a276ef72.js"></script>
 
     <h3>Instantiation, Parameters, and Arguments</h3>
     <p>
-      As we can see on lines 13 and 14, we have <i>instantiated</i> two new instances of the class Bear (instantiate is a fancy way of saying create an instance of a class.)  To be excessively explicit, let's look at line 13.  We assign the variable 'pooh' to a new instance of the Bear class, passing the 4 arguments within the parentheses.  When we instantiate a new instance, the special class method "initialize" is passed any arguments we've attached on line 13.  So the string "feral grizzly" goes to the parameter "type", and so on.  Note how in the method definition on line 4, we assign a default value of "true" to "wears_a_funny_hat?".
+      As we can see on lines 13 and 14, we have <i>instantiated</i> two new instances of the class Bear (instantiate is a fancy way of saying create an instance of a class.)  To be excessively explicit, let's look at line 13.  We assign the variable 'pooh' to a new instance of the Bear class, passing the 4 arguments within the parentheses.  When we instantiate a new instance, the special class method "initialize" is passed any arguments we've attached on line 13.  So the string "feral grizzly" goes to the parameter "type", and so on.  Note how in the method definition on line 4, we assign a default value of "true" to "wears_a_funny_hat".
     </p>
 
     <h3>Scope and Instance Variables</h3>
     <p>
-      But these are only locally accessible variables!  I want any method in the Bear class to be able to access type, hibernation_length, wears_a_funny_hat?, and quote.  So we assign an instance variable (e.g. @type) to the argument passed to the parameter.  This means that for the pooh variable, @type will be assigned the "feral grizzly" string that we had passed to the 'type' parameter. Now elsewhere in the Bear class, we can access @type, @hibernation_length, @wears_a_funny_hat?, and @quote.  Think of instance methods as being used by a single bear - it allows that particular bear to access different methods in their class.
+      But these are only locally accessible variables!  I want any method in the Bear class to be able to access type, hibernation_length, wears_a_funny_hat, and quote.  So we assign an instance variable (e.g. @type) to the argument passed to the parameter.  This means that for the pooh variable, @type will be assigned the "feral grizzly" string that we had passed to the 'type' parameter. Now elsewhere in the Bear class, we can access the information held by @type, @hibernation_length, @wears_a_funny_hat, and @quote.  Think of instance methods as being used by a single bear - it allows that particular bear to access different methods in their class specific to that bear.
     </p>
 
     <script src="https://gist.github.com/avtomate/1141d9a851afe378366b.js"></script>
