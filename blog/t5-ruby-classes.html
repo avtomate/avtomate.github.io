@@ -38,8 +38,29 @@
 
     <script src="https://gist.github.com/avtomate/a477dbe301d2a276ef72.js"></script>
 
+    <h3>Instantiation, Parameters, and Arguments</h3>
     <p>
-      As we can see on lines 13 and 14...
+      As we can see on lines 13 and 14, we have <i>instantiated</i> two new instances of the class Bear (instantiate is a fancy way of saying create an instance of a class.)  To be excessively explicit, let's look at line 13.  We assign the variable 'pooh' to a new instance of the Bear class, passing the 4 arguments within the parentheses.  When we instantiate a new instance, the special class method "initialize" is passed any arguments we've attached on line 13.  So the string "feral grizzly" goes to the parameter "type", and so on.  Note how in the method definition on line 4, we assign a default value of "true" to "wears_a_funny_hat?".
+    </p>
+
+    <h3>Scope and Instance Variables</h3>
+    <p>
+      But these are only locally accessible variables!  I want any method in the Bear class to be able to access type, hibernation_length, wears_a_funny_hat?, and quote.  So we assign an instance variable (e.g. @type) to the argument passed to the parameter.  This means that for the pooh variable, @type will be assigned the "feral grizzly" string that we had passed to the 'type' parameter. Now elsewhere in the Bear class, we can access @type, @hibernation_length, @wears_a_funny_hat?, and @quote.  Think of instance methods as being used by a single bear - it allows that particular bear to access different methods in their class.
+    </p>
+
+    <script src="https://gist.github.com/avtomate/1141d9a851afe378366b.js"></script>
+
+    <h3>Class Methods, String Interpolation, and the Ternary Operator</h3>
+    <p>
+      The fun continues to <i>bear</i>al out of control.  In the above code, we've added class method definitions on lines 11, 15, 19, and 23.  This means that when we call these methods on an object that <em>is a</em> Bear, they will execute the code within their respective definitions.  On line 32 we call the method "i_aint_got_no_type" on the object "panda".  This then proceeds to reference line 11, outputting the string "I ain't got no type, #{@type} bears is the only thing that I like."  Note the "#{@type}".  This syntax allows us to <em>interpolate</em> variables into our strings without the ugliness of concatenation.  String interpolation is also more memory efficient than concatenation, which is quite useful for our incredibly computing-power-intensive 42 line program.
+    </p>
+
+    <p>
+      If/else statements with only two elements to them (i.e. literally one 'if' and one 'else') are verbose and take several lines to write.  Thankfully Ruby allows us to use the ternary operator to make a basic if/else statement into one line, as seen on line 20.  The syntax is: conditional ? do_this_if_true : do_this_if_false.  If @wears_a_funny_hat evaluates to true, then we will output the first string, else the second string.  Syntactic sugar at its finest!
+    </p>
+
+    <p>
+      We've now completed our basic bear class (and to think, we weren't even <i>koala</i>fied 10 minutes ago!)  We've touched upon initialization, local vs instance scope.
     </p>
 
   </div>
