@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css' />
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css" />
+  <title> Michael Avtonomoff </title>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Michael Avtonomoff</h1>
+  </div>
+
+  <div id="nav">
+    <a href="http://avtomate.github.io">Home</a><br>
+    Projects<br>
+    <a href="http://avtomate.github.io/blog">Blog</a><br>
+    About Me<br>
+  </div>
+
+  <div id="section">
+    <h1>Ruby Hashes vs Javascript Objects</h1>
+    <h4>February 26, 2015</h4>
+
+    <h2>Ruby Hashes</h2>
+    <p>
+      A hash in Ruby is a collection of key-values pairs.  Whereas a Ruby array requires an integer for indexing, a hash allows any object type. A perfect metaphor for how hashes function are to imagine a dictionary: you pass a key (e.g. the word 'Aardvark') and a value will be returned (e.g. 'a medium-sized, burrowing, nocturnal mammal native to Africa.').  Hash-like data structures are often referred to as dictionaries in other languages.
+    </p>
+
+    <script src="https://gist.github.com/avtomate/5034fddf99516f49f620.js"></script>
+
+    <h2>Javascript Objects</h2>
+    <p>
+      An object in Javascript (JS) is a collection of properties, or name-value pairs.  If a property's value is a function, then the property is referred to as a method.
+    </p>
+
+    <script src="https://gist.github.com/avtomate/31f53e07ed134f7b6c33.js"></script>
+
+    <h2>Differences?</h2>
+    <p>
+      Now that we've covered the numerous similarities between Ruby hashes and JS objects, how are they different?  Perhaps the largest difference is data encapsulation of JS objects/Ruby Hashes.  JS doesn't restrict access to properties, whereas Ruby has a degree of data encapsulation by not allowing simple access to internal instance variables. 
+    </p>
+
+  </div>
+
+  <div id="footer">
+    <a href="https://github.com/avtomate">GitHub</a>
+  </div>
+
+</body>
+
+</html>
